@@ -1,16 +1,22 @@
-from os.path import defpath
-
 from fastapi import FastAPI
+from src.routes import router
+from src.database import Base, engine
+
+# Create database tables
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-@app.get("primo script")
-async def root():
-    return {"message": "hello world"}
+app.include_router(router)
 
-@app.get("/hello/{name}")
-async def hello(name: str):
-    return {"message": f"hello {name}"}
+
+@app.get("main")
+async def root():
+    return {"message": "Welcome to User Management API"}
+
+
+
+
 
 
 

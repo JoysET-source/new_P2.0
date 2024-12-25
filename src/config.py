@@ -22,4 +22,4 @@ def get_env_or_raise(key: str) -> str:
     return value
 
 DATABASE_URL = get_env_or_raise("DATABASE_URL")
-DATABASE_PASSWD = get_env_or_raise("DATABASE_PASSWD")
+# DATABASE_PASSWD = get_env_or_raise("DATABASE_PASSWD")

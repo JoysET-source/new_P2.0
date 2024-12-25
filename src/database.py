@@ -13,8 +13,8 @@ non modifica il database originale ma lo chiude
 """
 
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
 """from src.config import DATABASE_URL sostituisce DATABASE_URL="sqlite:///./sql_app.db" """
 from src.config import DATABASE_URL
@@ -30,6 +30,11 @@ def get_db():
         yield db
     finally:
         db.close()
+
+
+
+
+
 
 
 
