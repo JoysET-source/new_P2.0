@@ -7,7 +7,7 @@ importiamo da SQl cio che ci serve e apriamo il nostro Database
 uguale apriamo un database, poi con engine lo facciamo partire (come uvicorn per git)
 poi con sessionmaker creiamo le sessioni di lavoro
 ci lavoriamo dentro lo modifichiamo facciamo quello che ci serve con Base
-la funzione GET no ci serve per prendere e modificare il database con una sicurezza
+la funzione GET ci serve per prendere e modificare il database con una sicurezza
 try/finally yield, yield itera e se durante le modifiche al database appare un errore
 non modifica il database originale ma lo chiude
 """

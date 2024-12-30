@@ -4,6 +4,9 @@ prima class , se email non e string(EmailStr) non possiamo creare(usercreate) us
 Usercreate lo usiamo nelle applicazioni POST e PUT
 post lo usiamo per creare
 put lo usiamo per modificare
+
+qui definiamo il formato che devono avere gli input ricevuti per creare uno users e pydantic li verifica
+perche questa libreria gia contiene le funzioni con regex etc...
 """
 
 

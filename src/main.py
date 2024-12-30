@@ -10,7 +10,7 @@ app = FastAPI()
 app.include_router(router)
 
 
-@app.get("main")
+@app.get("/")
 async def root():
     return {"message": "Welcome to User Management API"}
 

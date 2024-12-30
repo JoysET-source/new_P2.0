@@ -13,7 +13,7 @@ from sqlalchemy import Column, Integer, String
 from src.database import Base
 
 """
-questa e una tabella con 4 colonne (id, email, username, passwd)
+questa e una tabella con 4 colonne (id, email, username, passwd), id si mette automatico
 """
 
 class User(Base):
