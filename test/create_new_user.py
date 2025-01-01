@@ -20,4 +20,4 @@ def create_new_users(n):
         response = requests.post(url, json=user)
         print(f"Created users {i}: {response.status_code}")
 
-create_new_users(10)
+create_new_users(30)

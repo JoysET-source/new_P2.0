@@ -4,7 +4,7 @@ from typing import List
 
 from src.database import get_db
 from src.models import User
-from src.schemas import UserCreate, User as UserSchema
+from src.schemas.user_schemas import UserCreate, User as UserSchema
 
 
 router = APIRouter(prefix="/users", tags=["users"])
@@ -73,3 +73,4 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
     db.delete(db_user)
     db.commit()
     return {"message": "User deleted"}
+

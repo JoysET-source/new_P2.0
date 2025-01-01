@@ -8,6 +8,12 @@
 # Starting FastApi app
 # uvicorn src.main:app --reload
 
+# comandi utili
+
+# for force kill process
+# Get-Process python* | Select-Object Id,ProcessName
+# Get-Process python* | Stop-Process -Force
+
 python-dotenv==1.0.0
 fastapi==0.115.0
 uvicorn[standard]==0.30.6
