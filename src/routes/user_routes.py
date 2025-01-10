@@ -36,7 +36,7 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
 # questo get si usa come slicing per estrarre solo gli users che vogliamo, skip salta il numero che vogliamo
 # limit imposta quanti ne vogliamo vedere
 # per esempio skip 5 limit 6 prende solo 6 users e i primi 5 li salta percio ti dara 6 users da id 6 a 11
-@router.get("/{users}", response_model=List[UserSchema])
+@router.get("/users", response_model=List[UserSchema])
 def slicing_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     users = db.query(User).offset(skip).limit(limit).all()
     return users
